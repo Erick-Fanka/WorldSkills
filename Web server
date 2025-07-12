@@ -1,0 +1,22 @@
+Arquivo para hospedagem de Servidor Web:
+Para se conectar a instancia:
+ssh ec2-user@ip da instancia -i par de chaves
+1- Atualizar os pacotes:
+sudo yum update -y
+2- Instalar o Apache, PHP e o unzip (se for preciso):
+sudo yum install -y httpd php unzip
+3- Iniciar e habilitar o Apache para iniciar automaticamente:
+sudo systemctl start httpd
+sudo systemctl enable httpd
+4- Listar o bucket para ver quais arquivos que temos dentro dele:
+aws s3 ls s3://nome_do_seu_bucket
+5- Baixar o arquivo ZIP do S3 para instancia:
+aws s3 cp s3://seu-bucket/seu-arquivo /home/ec2-user/
+6- Descompactar o ZIP:
+sudo unzip -o /home/ec2-user/seu-arquivo.zip -d /var/www/html/
+7- Ajustar dono e permissão para Apache ler os arquivo:
+sudo chown -R apache:apache /var/www/html
+sudo find /var/www/html -type d -exec chmod 755 {} \;
+sudo find /var/www/html -type f -exec chmod 644 {} \;
+8- Reiniciar o Apache:
+sudo systemctl restart httpd
