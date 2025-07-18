@@ -1,2 +1,10 @@
-# WorldSkills
-Este repositório é dedicado ao meu aprendizado e preparação para a WorldSkills, uma competição internacional que busca identificar e premiar os melhores talentos em diversas áreas técnicas. Aqui, você encontrará projetos, desafios e códigos que estou desenvolvendo enquanto me preparo para as seletivas nacionais.
+# WorldSkills Cloud Challenge ☁️
+
+Projeto de estudos para a WorldSkills — Computação em Nuvem.
+
+## Tecnologias usadas
+- AWS
+- Linux
+- PHP
+- Banco de dados em geral
+- JSON
