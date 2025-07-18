@@ -28,7 +28,7 @@ Este projeto contém um script Bash que automatiza a configuração de um servid
 
 ### 📄 Acesse o script diretamente
 
-👉 [userdata-webserver](https://github.com/erickdev/worldskills/blob/main/arquivos.sh/userdata-webserver)
+👉 [userdata-webserver](https://github.com/Erick-Fanka/WorldSkills/blob/main/arquivos.sh/userdata-webserver)
 
 ---
 
