@@ -1,4 +1,4 @@
-# 🌩️ WorldSkills Cloud Challenge
+# 🌩️ WorldSkills Cloud Computing
 
 Projeto de estudos voltado para a competição WorldSkills — foco em Computação em Nuvem e automação de infraestrutura.
 
