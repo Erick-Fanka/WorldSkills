@@ -23,7 +23,7 @@ sudo unzip -o /home/ec2-user/site.zip -d /var/www/html/
 
 # Move arquivos de /site.zip para /var/www/html e remove o diretório
 sudo mv /var/www/html/site.zip/* /var/www/html/
-sudo rm -rf /var/www/html/site2.zip
+sudo rm -rf /var/www/html/site.zip
 
 # Ajusta permissões
 sudo chown -R apache:apache /var/www/html
