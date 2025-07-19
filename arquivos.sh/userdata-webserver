@@ -13,17 +13,17 @@ sudo systemctl start httpd
 sudo systemctl enable httpd
 
 # Verifica se o bucket está acessível
-aws s3 ls s3://bucket-route53-vitor-antoni
+aws s3 ls s3://<name-bucket>
 
 # Baixa o arquivo zip do site
-aws s3 cp s3://bucket-route53-vitor-antoni/site.zip /home/ec2-user/
+aws s3 cp s3://<name-bucket>/<name-file> /home/ec2-user/
 
 # Extrai o conteúdo para o diretório do Apache
-sudo unzip -o /home/ec2-user/site.zip -d /var/www/html/
+sudo unzip -o /home/ec2-user/<name-file> -d /var/www/html/
 
-# Move arquivos de /site.zip para /var/www/html e remove o diretório
-sudo mv /var/www/html/site.zip/* /var/www/html/
-sudo rm -rf /var/www/html/site.zip
+# Move arquivos de /<name-file> para /var/www/html e remove o diretório
+sudo mv /var/www/html/<name-file>/* /var/www/html/
+sudo rm -rf /var/www/html/<name-file>
 
 # Ajusta permissões
 sudo chown -R apache:apache /var/www/html
