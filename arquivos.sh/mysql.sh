@@ -41,7 +41,7 @@ UPDATE nome_da_tabela SET idade = 31 WHERE nome = 'João';
 DELETE FROM nome_da_tabela WHERE nome = 'João';
 
 -- Sair do MySQL 
-exit
+exit;
 
 # Parar o serviço do MySQL
 sudo service mysql stop
