@@ -12,7 +12,7 @@ sudo apt install mysql-server
 sudo service mysql start
 
 # Entrar no MySQL e executar comandos SQL
-mysql -u root -p <<EOF
+mysql -u root -p 
 -- Criar um banco de dados
 CREATE DATABASE nome_do_banco;
 
@@ -27,8 +27,7 @@ CREATE TABLE nome_da_tabela (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     idade INT NOT NULL
-);
-
+)
 -- Inserir dados na tabela
 INSERT INTO nome_da_tabela (nome, idade) VALUES ('João', 30);
 
@@ -41,8 +40,8 @@ UPDATE nome_da_tabela SET idade = 31 WHERE nome = 'João';
 -- Excluir dados da tabela
 DELETE FROM nome_da_tabela WHERE nome = 'João';
 
--- Sair do MySQL (EOF encerra)
-EOF
+-- Sair do MySQL 
+exit
 
 # Parar o serviço do MySQL
 sudo service mysql stop
