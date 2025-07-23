@@ -37,3 +37,4 @@ ducker pull <image_name>
 
 # Para de executar container 
 docker stop <container
+# linha de teste para forçar commit
