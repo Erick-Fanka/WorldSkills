@@ -8,11 +8,14 @@
 # Atuliza os pacotes, instala e inicia o Docker
 sudo yum update -y
 sudo yum install -y Docker
-sudo yum systemctl start docker
-sudo yum systemctl enable docker
+sudo systemctl start docker
+sudo systemctl enable docker
 
 # Copia o arquivo do S3 para o diretório do usuário
 aws s3 cp s3://name-bucket/arquivo.zip /home/ec2-user/
+
+# Instala o  unzip (caso não tenha)
+sudo yum install -y unzip
 
 # Cria o diretório do site e extrai o conteúdo do arquivo zip
 unzip -o /home/ec2-user/arquivo.zip -d /home/ec2-user/site/
