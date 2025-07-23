@@ -5,36 +5,27 @@
 # Autor: Erick Fanka
 # Data: julho de 2025
 
-# Listar imagens baixadas
-docker images
+# Atuliza os pacotes, instala e inicia o Docker
+sudo yum update -y
+sudo yum install -y Docker
+sudo yum systemctl start docker
+sudo yum systemctl enable docker
 
-# Listar containers em execução
-docker ps  
+# Copia o arquivo do S3 para o diretório do usuário
+aws s3 cp s3://name-bucket/arquivo.zip /home/ec2-user/
 
-# Listar todos os containers
-docker ps -a
+# Cria o diretório do site e extrai o conteúdo do arquivo zip
+unzip -o /home/ec2-user/arquivo.zip -d /home/ec2-user/site/
 
-# Iniciar um container
-docker start <container_id>
+# Cria o Dockerfile para o site
+cat <<EOF > /home/ec2-user/site/Dockerfile
+FROM php:apache
+COPY . /var/www/html/
+EOF
 
-# Parar um container
-docker stop <container_id>
+# Entra no diretório do site
+cd /home/ec2-user/site/
 
-# Reiniciar um container
-docker restart <container_id>
-
-# Remover um container
-docker rm <container_id>
-
-# Remover uma imagem
-docker rmi <image_id>
-
-# Construindo um container a partir de uma imagem nova e existente sem travar terminal
-docker run -d image_name 
-
-# Baixar uma imagem do Docker Hub
-ducker pull <image_name>
-
-# Para de executar container 
-docker stop <container
-# linha de teste para forçar commit
+# Constrói a imagem Docker e a executa na porta 80
+docker build -t web-server:site1 .
+docker run -d -p 80:80 --name container1 web-server:site1
