@@ -5,9 +5,9 @@
 # Autor: Erick Fanka
 # Data: julho de 2025
 
-# Atuliza os pacotes, instala e inicia o Docker
+# Atualiza os pacotes, instala e inicia o Docker
 sudo yum update -y
-sudo yum install -y Docker
+sudo yum install -y docker
 sudo systemctl start docker
 sudo systemctl enable docker
 
