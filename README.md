@@ -1,48 +1,29 @@
 # 🌩️ WorldSkills Cloud Computing
 
-Projeto de estudos voltado para a competição WorldSkills — foco em Computação em Nuvem e automação de infraestrutura.
+Este repositório reúne **projetos e scripts de estudo focados na competição WorldSkills**, com ênfase em **Computação em Nuvem**, automação de infraestrutura e boas práticas em ambientes AWS.
+
+Aqui você encontrará cenários simulados com empresas fictícias, arquivos de automação (User Data, scripts Bash) e configurações úteis para o desenvolvimento de ambientes cloud robustos e escaláveis.
 
 ---
 
-## 🧰 Tecnologias utilizadas
+## 🧰 Tecnologias e Ferramentas
 
-- **AWS** (Amazon Web Services)
-- **Linux**
-- **PHP**
-- **Banco de Dados**
-- **JSON**
-
----
-
-## 🚀 Script de Inicialização para Web Server EC2
-
-Este projeto contém um script Bash que automatiza a configuração de um servidor Apache em uma instância EC2. O processo envolve instalação de pacotes, extração de conteúdo de um bucket S3 e organização da estrutura web para deploy imediato.
-
-### ⚙️ Funcionalidades
-
-- Instala Apache, PHP e unzip via `yum`
-- Baixa e extrai conteúdo de um bucket S3
-- Organiza os arquivos no diretório padrão do Apache
-- Ajusta permissões para segurança e funcionamento adequado
-- Preparado para testes de carga e execução rápida
-
-### 📄 Acesse o script diretamente
-
-👉 [userdata-webserver](https://github.com/Erick-Fanka/WorldSkills/blob/main/arquivos.sh/userdata-webserver)
+- **AWS (Amazon Web Services)** — EC2, S3, VPC, ALB, Auto Scaling, IAM
+- **Linux** — Amazon Linux 2 (linha de comando, automações)
+- **PHP** — Para aplicações web básicas nos cenários simulados
+- **S3 e Bash** — Para deploy automatizado via User Data
+- **Infraestrutura como Código (IaC)** — Em breve com CloudFormation/Terraform
+- **Banco de Dados** — Integrações com RDS e MySQL em alguns projetos
+- **Containers** - ECS, EKS, Docker, Kubernetes
 
 ---
 
-## 📝 Como utilizar
+## 👨‍💻 Autor
 
-1. Crie uma instância EC2 (Amazon Linux)
-2. Insira o conteúdo deste script no campo **User data** durante a criação ( não se esqueça de altera os nomes dos arquivos e bucket)
-3. Garanta que a instância tenha permissões IAM para acessar o bucket S3
-
----
-
-## 👨‍💻 Autor: Erick Fanka
-
-*Informações de contato aqui!*
-Linkedin: www.linkedin.com/in/erick-fanka-522a01317
+**Erick Fanka**  
+Competidor WorldSkills | Estudante de Cloud Computing  
+🔗 [LinkedIn](https://www.linkedin.com/in/erick-fanka)
 
 ---
+
+> 💡 Este repositório é voltado para fins educacionais, simulações e práticas para a competição WorldSkills Cloud Computing. Nenhuma empresa aqui é real.
