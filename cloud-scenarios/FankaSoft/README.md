@@ -1,8 +1,8 @@
-# Projeto: Relatório Fácil - Infraestrutura em Nuvem
+# Projeto: Infraestrutura em Nuvem
 
 ## 🧠 Cenário Fictício
 
-A empresa fictícia **FankaSoft**, especializada em soluções corporativas, solicitou a criação de uma infraestrutura em nuvem escalável e segura para hospedar a aplicação **"Relatório Fácil"**, uma plataforma online para geração automática de relatórios em PDF.
+A empresa fictícia **FankaSoft**, especializada em soluções corporativas, solicitou a criação de uma infraestrutura em nuvem escalável e segura para hospedar a aplicação **"Gerador de Carga"**, uma plataforma online para geração de carga e uso excessvo de CPU.
 
 ### Objetivo do Projeto
 
