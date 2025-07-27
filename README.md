@@ -1,55 +1,16 @@
-# 🌐 Cloud Scenarios — Projetos de Infraestrutura em Nuvem
+🌩️ WorldSkills Cloud Computing
+Este repositório reúne projetos e scripts de estudo focados na competição WorldSkills, com ênfase em Computação em Nuvem, automação de infraestrutura e boas práticas em ambientes AWS.
 
-Este repositório reúne **projetos fictícios de infraestrutura em nuvem**, criados com o objetivo de simular **cenários reais** de empresas que precisam de soluções **escaláveis**, **seguras** e **eficientes** na AWS.
+Aqui você encontrará cenários simulados com empresas fictícias, arquivos de automação (User Data, scripts Bash) e configurações úteis para o desenvolvimento de ambientes cloud robustos e escaláveis.
 
----
-
-## 📂 Estrutura do Repositório
-
-Cada pasta representa um **cenário independente**, contendo:
-
-- `README.md` — Instruções completas para replicar o ambiente, com explicações técnicas, scripts e templates para a automatização assim facilitando a criação do ambiente. 
-- `diagrama.png` — Imagem com o **diagrama da arquitetura**, facilitando a compreensão visual da estrutura proposta.
-
----
-
-## 🎯 Objetivos
-
-- ✅ Praticar a construção de arquiteturas na AWS com foco em **boas práticas**.
-- ✅ Simular **ambientes corporativos reais** com requisitos específicos.
-- ✅ Utilizar ferramentas como **AWS CLI**, **User Data** e **CloudFormation** para **automatizar** a infraestrutura.
-- ✅ Manter uma **biblioteca organizada** de projetos para **estudo, prática e demonstração**.
-- 🏅 Desenvolver habilidades práticas como parte da **preparação para a WorldSkills Cloud Computing**.
-
----
-
-
----
-
-## 🛠️ Tecnologias e Serviços Utilizados
-
-Os cenários podem incluir o uso dos seguintes serviços AWS:
-
-- Amazon EC2
-- Amazon RDS
-- Amazon S3
-- Elastic Load Balancing (ELB)
-- Auto Scaling Groups (ASG)
-- Amazon VPC (com Sub-redes, Tabelas de Roteamento, Gateways, etc.)
-- AWS CloudFormation
-- AWS Systems Manager
-- AWS IAM
-- e mais, dependendo da necessidade do cenário
-
----
-
-## 🚀 Como Usar
-
-1. Escolha uma das pastas de cenários.
-2. Leia o arquivo `README.md` da pasta selecionada.
-3. Estude o diagrama em `diagrama.png`.
-4. Execute os scripts e instruções conforme indicado para montar o ambiente.
-5. Analise os recursos criados e, se desejar, adapte para novos testes.
+🧰 Tecnologias e Ferramentas
+AWS (Amazon Web Services) — EC2, S3, VPC, ALB, Auto Scaling, IAM
+Linux — Amazon Linux 2 (linha de comando, automações)
+PHP — Para aplicações web básicas nos cenários simulados
+S3 e Bash — Para deploy automatizado via User Data
+Infraestrutura como Código (IaC) — Em breve com CloudFormation/Terraform
+Banco de Dados — Integrações com RDS e MySQL em alguns projetos
+Containers - ECS, EKS, Docker, Kubernetes
 
 ---
 
