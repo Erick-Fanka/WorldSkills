@@ -21,8 +21,7 @@ aws s3 cp s3://<name-bucket>/<name-file> /home/ec2-user/
 # Extrai o conteúdo para o diretório do Apache
 sudo unzip -o /home/ec2-user/<name-file> -d /var/www/html/
 
-# Move arquivos de /<name-file> para /var/www/html e remove o diretório
-sudo mv /var/www/html/<name-file>/* /var/www/html/
+# Remove a pasta <name-file>
 sudo rm -rf /var/www/html/<name-file>
 
 # Ajusta permissões
