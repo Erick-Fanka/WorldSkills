@@ -1,0 +1,17 @@
+{
+  "comment": "Aqui ele da todas as permissões para o usuário USER-A, prestam atenção pois temos que ter o AWS antes de por o principal nesse caso e nos recursos temos que por o /* para que ele consiga pegar os objetos dentro do bucket.",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::110036251505:user/USER-A"
+      },
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::jam-challenge-patientdata-us-east-1-110036251505",
+        "arn:aws:s3:::jam-challenge-patientdata-us-east-1-110036251505/*"
+      ]
+    }
+  ]
+}
