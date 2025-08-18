@@ -2,7 +2,7 @@
 # Script de inicialização para EC2 com Apache, PHP e conteúdo de bucket S3.
 # Nome do arquivo: World Skills/arquivos.sh/userdata-webserver
 # Autor: Erick Fanka
-# Data: julho de 2025
+# Data: agosto de 2025
 
 # Atualiza pacotes e instala Apache, PHP e unzip
 sudo yum update -y
