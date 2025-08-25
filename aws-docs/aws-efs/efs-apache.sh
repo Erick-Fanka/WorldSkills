@@ -4,14 +4,6 @@
 # Autor: Erick Fanka
 # Data: agosto de 2025
 
-
-  GNU nano 8.3                                                                                         script.sh                                                                                         Modified
-#!/bin/bash
-# Script de inicialização para EC2 com Apache, PHP e conteúdo de bucket S3.
-# Nome do arquivo: World Skills/arquivos.sh/userdata-webserver
-# Autor: Erick Fanka
-# Data: agosto de 2025
-
 # Atualiza pacotes e instala Apache, PHP, unzip e o efs
 sudo yum update -y
 sudo yum install -y httpd php unzip aws-cli amazon-efs-utils
