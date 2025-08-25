@@ -5,7 +5,43 @@
 # Data: agosto de 2025
 
 
-# Esse script configura o EFS como o diretório raiz do Apache HTTP Server no Amazon Linux 2023.
-sudo sed -i 's|DocumentRoot "/var/www/html"|DocumentRoot "/home/ec2-user/efs"|' /etc/httpd/conf/httpd.conf
-sudo sed -i 's|<Directory "/var/www/html">|<Directory "/home/ec2-user/efs">|' /etc/httpd/conf/httpd.conf
+  GNU nano 8.3                                                                                         script.sh                                                                                         Modified
+#!/bin/bash
+# Script de inicialização para EC2 com Apache, PHP e conteúdo de bucket S3.
+# Nome do arquivo: World Skills/arquivos.sh/userdata-webserver
+# Autor: Erick Fanka
+# Data: agosto de 2025
+
+# Atualiza pacotes e instala Apache, PHP, unzip e o efs
+sudo yum update -y
+sudo yum install -y httpd php unzip aws-cli amazon-efs-utils
+
+# Inicia e habilita o Apache
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+# Verifica se o bucket está acessível
+aws s3 ls s3://<name-bucket>
+
+# Baixa o arquivo zip do site
+aws s3 cp s3://<name-bucket>/<name-file.zip> /home/ec2-user/
+
+# Cria o diretório para o sistema de arquivos
+sudo mkdir /mnt/efs
+
+# Mounta o efs
+sudo mount -t efs -o tls fs-id efs/ /mnt/efs
+
+# Extrai o conteúdo para o diretório do Apache
+sudo unzip -o /home/ec2-user/site.zip -d /mnt/efs
+
+sudo sed -i 's|DocumentRoot "/var/www/html"|DocumentRoot "/mnt/efs"|' /etc/httpd/conf/httpd.conf
+sudo sed -i 's|<Directory "/var/www/html">|<Directory "/mnt/efs">|' /etc/httpd/conf/httpd.conf
+
+# Ajusta permissões
+sudo chown -R apache:apache /mnt/efs
+sudo find /mnt/efs -type d -exec chmod 755 {} \;
+sudo find /mnt/efs -type f -exec chmod 644 {} \;
+
+# Reinicia o Apache
 sudo systemctl restart httpd
