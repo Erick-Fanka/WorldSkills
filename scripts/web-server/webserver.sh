@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script de inicialização para EC2 com Apache, PHP e conteúdo de bucket S3.
-# Nome do arquivo: World Skills/arquivos.sh/userdata-webserver
+# Nome do arquivo: World Skills/scripts/webs-erver/webserver.sh
 # Autor: Erick Fanka
 # Data: agosto de 2025
 
